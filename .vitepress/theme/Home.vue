@@ -4,7 +4,6 @@ import { data as posts } from './posts.data.js'
 import { useData } from 'vitepress'
 
 const { frontmatter } = useData()
-console.log(posts)
 </script>
 
 <template>

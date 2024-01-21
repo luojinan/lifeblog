@@ -1,5 +1,5 @@
 ---
-title: The Vue Point
-subtext: Updates, tips & opinions from the maintainers of Vue.js.
+title: 安的 blog 🪴
+subtext: feel easy in here 🏄‍♂️
 index: true
 ---
