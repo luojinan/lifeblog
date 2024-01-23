@@ -9,8 +9,8 @@ const { page, frontmatter } = useData()
 
 <template>
   <div class="antialiased bg-gray-950" style="min-height: 100vh;">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
-      <nav class="flex justify-between items-center py-10 font-bold">
+    <div class="z-10 mx-auto px-4 fixed w-full bg-gray-950 sm:px-6 xl:max-w-5xl xl:px-0">
+      <nav class="flex justify-between items-center pt-6 pb-2 font-bold">
         <a class="text-xl" href="/lifeblog/" aria-label="The Vue Point">
           <img
             class="inline-block mr-2"
@@ -30,7 +30,7 @@ const { page, frontmatter } = useData()
         </div> -->
       </nav>
     </div>
-    <main class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
+    <main class="max-w-3xl mx-auto px-4 pt-16 sm:px-6 xl:max-w-5xl xl:px-0">
       <Home v-if="frontmatter.index" />
       <NotFound v-else-if="page.isNotFound" />
       <Article v-else />

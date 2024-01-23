@@ -14,7 +14,7 @@ const { frontmatter } = useData()
       >
         {{ frontmatter.title }}
       </h1>
-      <p class="text-lg leading-7 text-white">
+      <p class="text-lg leading-7 text-gray-300">
         {{ frontmatter.subtext }}
       </p>
     </div>
@@ -27,7 +27,7 @@ const { frontmatter } = useData()
           <div class="space-y-5 xl:col-span-3">
             <div class="space-y-6">
               <h2 class="text-2xl leading-8 font-bold tracking-tight">
-                <a class="text-white" :href="url">{{
+                <a class="text-gray-300 hover:text-white" :href="url">{{
                   title
                 }}</a>
               </h2>
@@ -37,9 +37,9 @@ const { frontmatter } = useData()
                 v-html="excerpt"
               ></div>
             </div>
-            <div class="text-base leading-6 font-medium">
+            <!-- <div class="text-base leading-6 font-medium">
               <a class="link" aria-label="read more" :href="url">Read more →</a>
-            </div>
+            </div> -->
           </div>
         </article>
       </li>
