@@ -1,5 +1,5 @@
 ---
-title: 安的 blog 🪴
+title: An's blog 🪴
 subtext: feel easy in here 🏄‍♂️
 index: true
 ---
