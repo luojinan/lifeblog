@@ -19,7 +19,7 @@ export default createContentLoader('posts/*.md', {
     return raw
       .map(({ url, frontmatter, excerpt }) => ({
         title: frontmatter.title,
-        url: `/life${url}`,
+        url: `/lifeblog${url}`,
         excerpt,
         date: formatDate(frontmatter.date)
       }))
