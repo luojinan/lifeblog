@@ -11,13 +11,14 @@ const { page, frontmatter } = useData()
   <div class="antialiased bg-gray-950" style="min-height: 100vh;">
     <div class="z-10 mx-auto px-4 fixed sm:relative w-full bg-gray-950 sm:px-6 xl:max-w-5xl xl:px-0">
       <nav class="flex justify-between items-center pt-6 pb-2 font-bold">
-        <a class="text-xl" href="/lifeblog/" aria-label="The Vue Point">
+        <a class="text-xl" href="/lifeblog/">
           <img
-            class="inline-block mr-2"
+            class="inline-block mr-1"
             style="width: 36px; height: 31px"
             alt="logo"
             src="/logo.svg"
           />
+          <span v-if="!frontmatter.index" class="link text-base">An's Blog</span>
         </a>
         <!-- <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
