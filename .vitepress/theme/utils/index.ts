@@ -19,3 +19,25 @@ export function calculateReadingTime(chineseCharacterCount: number, readingSpeed
   const readingTimeInMinutes = chineseCharacterCount / readingSpeed;
   return Math.ceil(readingTimeInMinutes);
 }
+
+/**
+ * 获取图片的宽度、高度和宽高比
+ * @param src 图片链接
+ * @returns 返回一个包含图片宽度、高度和宽高比的对象
+ */
+export const getImgWh = (src:string):Promise<{ width: number, height: number,ratio: number }> => {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.onload = function () {
+      const width = this.width;
+      const height = this.height;
+      resolve({
+        width,
+        height,
+        ratio: height/width
+      })
+    };
+    // oss图片宽度设置为最小，已节省流量，用来获取宽高比，实际使用时自行设置宽高
+    img.src = `${src}/resize,w_10`
+  })
+}
