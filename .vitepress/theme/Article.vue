@@ -15,6 +15,7 @@ function findCurrentIndex() {
 
 // use the customData date which contains pre-resolved date info
 const date = computed(() => posts[findCurrentIndex()].date)
+const workCount = computed(() => posts[findCurrentIndex()].workCount)
 const nextPost = computed(() => posts[findCurrentIndex() - 1])
 const prevPost = computed(() => posts[findCurrentIndex() + 1])
 </script>
@@ -28,6 +29,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
       >
         {{ data.title }}
       </h1>
+      <span class="text-gray-300">{{ workCount }}字</span>
     </header>
 
     <div

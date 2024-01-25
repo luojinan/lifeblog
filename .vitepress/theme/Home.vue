@@ -19,7 +19,7 @@ const { frontmatter } = useData()
       </p>
     </div>
     <ul class="divide-y divide-slate-200/5">
-      <li class="py-12" v-for="{ title, url, date, excerpt } of posts">
+      <li class="py-12" v-for="{ title, url, date, excerpt, workCount } of posts">
         <article
           class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline"
         >
@@ -37,9 +37,7 @@ const { frontmatter } = useData()
                 v-html="excerpt"
               ></div>
             </div>
-            <!-- <div class="text-base leading-6 font-medium">
-              <a class="link" aria-label="read more" :href="url">Read more →</a>
-            </div> -->
+            <div class="text-gray-300"><span>{{ workCount }}字</span></div>
           </div>
         </article>
       </li>
