@@ -4,6 +4,7 @@ import Date from './Date.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
 import { data as posts } from './posts.data.js'
+import { calculateReadingTime } from './utils/index'
 
 const { frontmatter: data } = useData()
 
@@ -29,14 +30,13 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
       >
         {{ data.title }}
       </h1>
-      <span class="text-gray-300">{{ workCount }}字</span>
+      <div class="pt-1 text-gray-300 text-sm">（{{ workCount.toLocaleString() }}字 约需要 {{calculateReadingTime(workCount)}}分钟）</div>
     </header>
 
     <div
       class="divide-y xl:divide-y-0 divide-gray-200 divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-16 xl:pb-20"
       style="grid-template-rows: auto 1fr"
     >
-      <!-- <Author /> -->
       <div
         class="divide-y divide-gray-200 divide-slate-200/5 xl:pb-0 xl:col-span-3 xl:row-span-2"
       >
@@ -50,7 +50,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           <h2
             class="text-xs tracking-wide uppercase text-white"
           >
-            Next Article
+            上一篇
           </h2>
           <div class="link">
             <a :href="nextPost.url">{{ nextPost.title }}</a>
@@ -60,7 +60,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
           <h2
             class="text-xs tracking-wide uppercase text-white"
           >
-            Previous Article
+            下一篇
           </h2>
           <div class="link">
             <a :href="prevPost.url">{{ prevPost.title }}</a>

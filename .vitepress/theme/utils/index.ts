@@ -8,3 +8,14 @@ export function countChineseCharacters(str: string) {
   const matches = str.match(pattern); // 使用正则表达式匹配所有中文字符
   return matches ? matches.length : 0; // 返回匹配到的中文字数
 }
+
+/**
+ * 计算阅读时间
+ * @param chineseCharacterCount 需要阅读的汉字数量
+ * @param readingSpeed 阅读速度（每分钟阅读的汉字数量）
+ * @returns 阅读完指定汉字数量所需的时间（以分钟为单位）
+ */
+export function calculateReadingTime(chineseCharacterCount: number, readingSpeed: number = 300): number {
+  const readingTimeInMinutes = chineseCharacterCount / readingSpeed;
+  return Math.ceil(readingTimeInMinutes);
+}
