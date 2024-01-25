@@ -37,7 +37,7 @@ export const getImgWh = (src:string):Promise<{ width: number, height: number,rat
         ratio: height/width
       })
     };
-    // oss图片宽度设置为最小，已节省流量，用来获取宽高比，实际使用时自行设置宽高
+    // oss图片宽度设置为最小，以节省流量，用来获取宽高比，实际使用时自行设置宽高
     img.src = `${src}/resize,w_10`
   })
 }

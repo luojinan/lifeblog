@@ -1,6 +1,7 @@
 
 - [ ] 画廊页面设计
 - [x] 图片放大功能 [github](https://github.com/vuejs/vitepress/issues/854)
+- [x] 字数统计
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240124152951388.png?x-oss-process=image/format,webp/resize,w_640)
 问题是不支持移动端双指缩放、拖拽移动，PC也仅仅是把原图宽高展示出来，不支持再放大缩小，从源码上看也仅仅是普通的全屏查看图片，并没有其他交互逻辑
@@ -28,7 +29,7 @@ export const getImgWh = (src:string):Promise<{ width: number, height: number,rat
         ratio: height/width
       })
     };
-    // oss图片宽度设置为最小，已节省流量，用来获取宽高比，实际使用时自行设置宽高
+    // oss图片宽度设置为最小，以节省流量，用来获取宽高比，实际使用时自行设置宽高
     img.src = `${src}/resize,w_10`
   })
 }

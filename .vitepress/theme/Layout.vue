@@ -18,7 +18,7 @@ const { page, frontmatter } = useData()
             alt="logo"
             src="/logo.svg"
           />
-          <span v-if="!frontmatter.index" class="link text-base">An's Blog</span>
+          <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
         <!-- <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
