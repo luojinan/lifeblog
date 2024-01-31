@@ -20,7 +20,7 @@ const { frontmatter } = useData()
       </p>
     </div>
     <ul class="divide-y divide-slate-200/5">
-      <li class="pt-6 pb-2" v-for="{ title, url, date, excerpt, workCount } of posts">
+      <li class="px-6 py-4 mb-6 bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of posts">
         <article
           class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline"
         >

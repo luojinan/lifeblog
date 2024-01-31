@@ -15,7 +15,7 @@ export function countChineseCharacters(str: string) {
  * @param readingSpeed 阅读速度（每分钟阅读的汉字数量）
  * @returns 阅读完指定汉字数量所需的时间（以分钟为单位）
  */
-export function calculateReadingTime(chineseCharacterCount: number, readingSpeed: number = 300): number {
+export function calculateReadingTime(chineseCharacterCount: number, readingSpeed: number = 200): number {
   const readingTimeInMinutes = chineseCharacterCount / readingSpeed;
   return Math.ceil(readingTimeInMinutes);
 }
