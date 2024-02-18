@@ -27,7 +27,8 @@ export default {
               width: 750 ,
               height: ratio * 750,
               index: 0,
-            }]
+            }],
+            secondaryZoomLevel: 2.5,
           });
           pswp.init(); // initializing PhotoSwipe core adds it to DOM
         };
