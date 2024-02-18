@@ -35,7 +35,7 @@ date: 2024-02-3
 
 冬季荒凉的大山露出黄褐色的土和凌乱的草木，凛冽的风一阵一阵的从身边穿过，接近黄昏的冬日太阳，似乎热量已经消耗光了，疲惫的挂在山上
 
-![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240203223841293.JPG?x-oss-process=image/format,webp/resize,w_720)
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240203223841293.JPG?x-oss-process=image/format,webp/resize,w_640)
 
 我一直渴望看到荒原，但是不管是这次的长城还是其他地方，目前可以比较轻松抵达的荒原总避免不了在一片人挤人里，而这里人迹稀少！
 
@@ -51,6 +51,20 @@ date: 2024-02-3
 
 整个小镇人烟稀少，连工作人员也少，即使大部分是狭窄的巷子，也从来没有出现挤着的时候，仿佛包场的感觉实在太爽了！
 
+小猫也很多
+
+::: details 猫猫折叠🐱 (4)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218193701197.jpg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218193712008.jpg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218193554614.jpg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218194417043.jpg?x-oss-process=image/format,webp/resize,w_640)
+
+:::
+
 在北京市区随便哪个冰场都是下饺子似的一个接一个人，在这里冰面上岁月静好，悠闲自得，啊啊，真好！(大家依然决定不玩冰上项目)(🥲好可惜！x3)
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240203224554974.jpg?x-oss-process=image/format,webp/resize,w_640)
@@ -59,8 +73,10 @@ date: 2024-02-3
 
 非常漂亮！让人眼前一亮
 
-::: details 多图折叠🙈 (4)
+::: details 多图折叠🙈 (5)
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218163538018.jpg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218194807495.jpg?x-oss-process=image/format,webp/resize,w_640)
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240218162759756.JPG?x-oss-process=image/format,webp/resize,w_640)
 
