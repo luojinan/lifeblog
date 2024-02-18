@@ -150,9 +150,21 @@ span.lang {
   font-size: 14px;
   line-height: 1.3;
   font-weight: 500;
-  color: #444;
-  background-color: #f9f9f9;
+  color: rgba(255, 255, 245, 0.86);
+  background-color: rgba(101, 117, 133, .16);
 }
+
+.custom-block.details {
+  padding: 16px 16px 8px;
+}
+
+.custom-block.details summary {
+  margin: 0 0 8px;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+
 .custom-block .custom-block-title {
   margin-bottom: 8px;
   font-size: 15px;

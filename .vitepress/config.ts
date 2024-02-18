@@ -15,4 +15,11 @@ export default defineConfig({
       { async: '', src: 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/umd/photoswipe.umd.min.js' }
     ],
   ],
+  markdown: {
+    image: {
+      // 默认禁用图片懒加载
+      lazyLoading: true
+    }
+  }
+
 })
