@@ -11,6 +11,10 @@
   --c-brand-light: #5c73e7;
 }
 
+body {
+  @apply bg-neutral-900;
+}
+
 nav img {
   vertical-align: middle;
 }
