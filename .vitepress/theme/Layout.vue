@@ -48,6 +48,6 @@ const totalInfo = {
       <NotFound v-else-if="page.isNotFound" />
       <Article v-else />
     </main>
-    <footer class="px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
+    <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
   </div>
 </template>
