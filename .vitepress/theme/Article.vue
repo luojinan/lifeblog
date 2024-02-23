@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Date from './Date.vue'
+import DateComp from './Date.vue'
 // import Author from './Author.vue'
 import { computed } from 'vue'
 import { useData, useRoute } from 'vitepress'
@@ -19,12 +19,15 @@ const date = computed(() => posts[findCurrentIndex()].date)
 const workCount = computed(() => posts[findCurrentIndex()].workCount)
 const nextPost = computed(() => posts[findCurrentIndex() - 1])
 const prevPost = computed(() => posts[findCurrentIndex() + 1])
+
+const dateString = (time: number): string => new Date(time).toLocaleDateString()
+
 </script>
 
 <template>
   <article class="xl:divide-y xl:divide-gray-200 xl:divide-slate-200/5">
     <header class="pt-6 xl:pb-10 space-y-1 text-center">
-      <Date :date="date" />
+      <DateComp :date="date" />
       <h1
         class="text-3xl leading-9 font-extrabold text-white tracking-tight sm:text-4xl sm:leading-10 md:text-5xl md:leading-14"
       >
@@ -34,7 +37,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
     </header>
 
     <div
-      class="divide-y xl:divide-y-0 divide-gray-200 divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-16 xl:pb-20"
+      class="divide-y xl:divide-y-0 divide-gray-200 divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-6 xl:pb-20"
       style="grid-template-rows: auto 1fr"
     >
       <div
@@ -53,21 +56,21 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
             上一篇
           </h2>
           <div class="link">
-            <a :href="nextPost.url">{{ nextPost.title }}</a>
+            <a :href="nextPost.url">{{ nextPost.title }} ({{ dateString(nextPost.date.time) }})</a>
           </div>
         </div>
-        <div v-if="prevPost" class="py-8">
+        <div v-if="prevPost" class="py-8 text-right">
           <h2
             class="text-xs tracking-wide uppercase text-white"
           >
             下一篇
           </h2>
           <div class="link">
-            <a :href="prevPost.url">{{ prevPost.title }}</a>
+            <a :href="prevPost.url">{{ prevPost.title }} ({{ dateString(prevPost.date.time) }})</a>
           </div>
         </div>
-        <div class="pt-8">
-          <a class="link" href="/lifeblog/">← Back to the blog</a>
+        <div class="pt-4">
+          <a class="link" href="/lifeblog/">← 全部博客</a>
         </div>
       </footer>
     </div>

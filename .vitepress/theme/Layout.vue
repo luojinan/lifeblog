@@ -3,8 +3,20 @@ import { useData } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
 import NotFound from './NotFound.vue'
+import { data as posts } from './posts.data.js'
 
 const { page, frontmatter } = useData()
+
+const totalInfo = {
+  total: posts.length,
+  workCount: posts.reduce((acc, cur) => {
+    if (cur.workCount) {
+      acc += cur.workCount
+    }
+    return acc
+  }, 0)
+}
+
 </script>
 
 <template>
@@ -36,5 +48,6 @@ const { page, frontmatter } = useData()
       <NotFound v-else-if="page.isNotFound" />
       <Article v-else />
     </main>
+    <footer class="px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
   </div>
 </template>
