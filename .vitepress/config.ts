@@ -6,6 +6,7 @@ export default defineConfig({
   description: 'The life blog for me',
   head: [
     ['meta', { name: 'twitter:site', content: '@vuejs' }],
+    ['link', { rel: 'icon', href: '/lifeblog/favicon.ico' }],
     [
       'link',
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css' }
