@@ -33,6 +33,8 @@ date: 2024-02-19
 
 ### 年会不能停
 
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240224123803923.png?x-oss-process=image/format,webp/resize,w_720)
+
 因为自己就在国内IT行业搬砖，就算只是混在底层企业，挤不进互联网大厂，也会对互联网公司的所作所为了如指掌，`996、黑话、花名、降本增笑、裁员广进`
 
 人心惶惶的片段用点名的喜剧效果冲淡了剧情里的不安和恐惧，但是已经足够让我产生PTSD的心跳加速，坐立不安了
@@ -56,6 +58,10 @@ date: 2024-02-19
 外包被收纳为正式员工的希望更加渺茫，反而是全部解除合同的居多。在压榨下让一个人干两个人的活，还有很多人抢着干的现象让大厂更加肆无忌惮
 
 ### 热辣滚烫/百元之恋
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240224123848495.png?x-oss-process=image/format,webp/resize,w_720)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240224123839843.png?x-oss-process=image/format,webp/resize,w_720)
 
 更喜欢前半部分。虽然后面很燃(但是也有人说前面太拖沓)，现实的社会并不会对善良老实的人有什么优待，
 
