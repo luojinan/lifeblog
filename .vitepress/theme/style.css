@@ -223,3 +223,24 @@ strong {
   font-size: 0.9em;
   border-radius: 7.5px;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.popup iframe {
+  width: 80vw;
+  height: 80vh;
+}
+
+.popup button {
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 0;
+} 
