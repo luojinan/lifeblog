@@ -4,6 +4,7 @@ import Home from './Home.vue'
 import Article from './Article.vue'
 import NotFound from './NotFound.vue'
 import { data as posts } from './posts.data.js'
+import Photo from './Photo.vue'
 
 const { page, frontmatter } = useData()
 
@@ -46,6 +47,7 @@ const totalInfo = {
     <main class="max-w-3xl mx-auto px-4 pt-16 sm:px-6 xl:max-w-5xl xl:px-0">
       <Home v-if="frontmatter.index" />
       <NotFound v-else-if="page.isNotFound" />
+      <Photo v-else-if="page.title === 'Photo'" />
       <Article v-else />
     </main>
     <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
