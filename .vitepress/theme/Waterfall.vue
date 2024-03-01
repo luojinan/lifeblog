@@ -18,8 +18,9 @@ const columns = ref(props.columnCountMobile)
 
 // 根据屏幕宽度动态调整列数
 const handleResize = () => {
-  const isMobile = window.innerWidth <= 600 // 假设手机屏幕宽度 <=600px
-  columns.value = isMobile ? props.columnCountMobile : props.columnCountDesktop
+  // const isMobile = window.innerWidth <= 600 // 假设手机屏幕宽度 <=600px
+  // columns.value = isMobile ? props.columnCountMobile : props.columnCountDesktop
+  columns.value = props.columnCountMobile
 }
 
 onMounted(() => {
