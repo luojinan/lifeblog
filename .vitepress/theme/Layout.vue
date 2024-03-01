@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, useRouter } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
 import NotFound from './NotFound.vue'
@@ -17,6 +17,7 @@ const totalInfo = {
     return acc
   }, 0)
 }
+const {go} = useRouter()
 
 </script>
 
@@ -33,15 +34,16 @@ const totalInfo = {
           />
           <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
-        <!-- <div class="text-sm text-gray-500 dark:text-white leading-5">
-          <a
+        <div class="text-sm text-gray-500 dark:text-white leading-5">
+          <span @click="()=>go('/lifeblog/posts/photo')">相册</span>
+          <!-- <a
             class="hover:text-gray-700 dark:hover:text-gray-200"
             href="https://github.com/vuejs/blog"
             target="_blank"
             rel="noopener"
             ><span class="hidden sm:inline">GitHub </span></a
-          >
-        </div> -->
+          > -->
+        </div>
       </nav>
     </div>
     <main class="max-w-3xl mx-auto px-4 pt-16 sm:px-6 xl:max-w-5xl xl:px-0">
