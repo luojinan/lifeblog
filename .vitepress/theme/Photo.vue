@@ -1,5 +1,5 @@
 <template>
-  <Waterfall>
+  <Waterfall class="mt-4">
     <template #column-0>
       <div id="column-0">
         <img

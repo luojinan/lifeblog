@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useData, useRouter } from 'vitepress'
+import { useData } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
 import NotFound from './NotFound.vue'
@@ -17,7 +17,8 @@ const totalInfo = {
     return acc
   }, 0)
 }
-const {go} = useRouter()
+
+// const isPhoto = page.value.title === 'Photo'
 
 </script>
 
@@ -35,7 +36,7 @@ const {go} = useRouter()
           <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
         <div class="text-sm text-white leading-5">
-          <a class="text-xl" href="/lifeblog/posts/photo">
+          <a v-show="page.title !== 'Photo'" class="text-xl" href="/lifeblog/photo">
             <img
               class="inline-block mr-1 fill-white"
               style="width: 24px; height: 24px;"
