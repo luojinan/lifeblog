@@ -34,15 +34,15 @@ const {go} = useRouter()
           />
           <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
-        <div class="text-sm text-gray-500 dark:text-white leading-5">
-          <span @click="()=>go('/lifeblog/posts/photo')">相册</span>
-          <!-- <a
-            class="hover:text-gray-700 dark:hover:text-gray-200"
-            href="https://github.com/vuejs/blog"
-            target="_blank"
-            rel="noopener"
-            ><span class="hidden sm:inline">GitHub </span></a
-          > -->
+        <div class="text-sm text-white leading-5">
+          <a class="text-xl" href="/lifeblog/posts/photo">
+            <img
+              class="inline-block mr-1 fill-white"
+              style="width: 24px; height: 24px;"
+              alt="logo"
+              src="/mingcute--photo-album-line.svg"
+            />
+          </a>
         </div>
       </nav>
     </div>
