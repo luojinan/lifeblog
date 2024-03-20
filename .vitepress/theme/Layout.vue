@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import Home from './Home.vue'
 import Article from './Article.vue'
+import FavouritePost from './FavouritePost.vue'
+import Home from './Home.vue'
 import NotFound from './NotFound.vue'
-import { data as posts } from './posts.data.js'
 import Photo from './Photo.vue'
+import { data as posts } from './posts.data.js'
 
 const { page, frontmatter } = useData()
 
@@ -36,11 +37,19 @@ const totalInfo = {
           <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
         <div class="text-sm text-white leading-5">
-          <a v-show="page.title !== 'Photo'" class="text-xl" href="/lifeblog/photo">
-            <img
-              class="inline-block mr-1 fill-white"
+          <a v-show="page.title !== 'FavouritePost'" href="/lifeblog/favouritePost">
+          <img
+              class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px;"
-              alt="logo"
+              alt="favouritePost"
+              src="/file-like.svg"
+            />
+          </a>
+          <a v-show="page.title !== 'Photo'" href="/lifeblog/photo">
+            <img
+              class="inline-block ml-2 opacity-80 hover:opacity-100"
+              style="width: 24px; height: 24px;"
+              alt="photo"
               src="/mingcute--photo-album-line.svg"
             />
           </a>
@@ -51,6 +60,7 @@ const totalInfo = {
       <Home v-if="frontmatter.index" />
       <NotFound v-else-if="page.isNotFound" />
       <Photo v-else-if="page.title === 'Photo'" />
+      <FavouritePost v-else-if="page.title === 'FavouritePost'" />
       <Article v-else />
     </main>
     <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
