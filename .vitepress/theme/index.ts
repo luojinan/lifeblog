@@ -1,7 +1,7 @@
-import './style.css'
-import Layout from './Layout.vue'
 import { useRoute } from 'vitepress';
-import { nextTick, onMounted, watch } from 'vue';
+import { onMounted } from 'vue';
+import Layout from './Layout.vue';
+import './style.css';
 import { getImgWh } from './utils/index.js';
 
 
@@ -69,11 +69,11 @@ export default {
       })
     };
     onMounted(() => {
-      initZoom();
+      // initZoom();
     });
-    watch(
-      () => route.path,
-      () => nextTick(() => initZoom())
-    );
+    // watch(
+    //   () => route.path,
+    //   () => nextTick(() => initZoom())
+    // );
   },
 }
