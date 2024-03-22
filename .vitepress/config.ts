@@ -1,4 +1,3 @@
-import mdItCustomAttrs from "markdown-it-custom-attrs";
 import { defineConfig } from 'vitepress';
 
 export default defineConfig({
@@ -10,14 +9,22 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/lifeblog/favicon.ico' }],
     [
       'link',
-      { rel: 'stylesheet', href: "https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" }
-      // { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css' }
+      { rel: 'stylesheet', href: "https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.css" }
     ],
     [
       'script',
-      { async: '', src: "https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js", }
-      // { async: '', src: 'https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/umd/photoswipe.umd.min.js' }
+      { async: '', src: "https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js", }
     ],
+    [
+      'script',
+      {},
+      `document.querySelector('script[src="https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js"]').addEventListener('load', function() {
+        Fancybox.bind("[data-fancybox]", {
+          // Your custom options TODO: 双击放大无效
+          contentDblClick: "close"
+        });
+      });`
+    ]
   ],
   markdown: {
     image: {
@@ -25,13 +32,22 @@ export default defineConfig({
       lazyLoading: true
     },
     config: (md) => {
-      // use more markdown-it plugins!
-      // TODO: 简单修改attr 无法预览原图
-      md.use(mdItCustomAttrs, "image", {
-        "data-fancybox": "gallery",
-        "style": "cursor:pointer;"
-      });
+      // TODO: 自定义 markdownit plugin
+      md.use(function (md) {
+        const image = md.renderer.rules.image
+        md.renderer.rules.image = (...args) => {
+          let rawCode = image(...args);
+          const regex = /src=["']([^"']+)["']/;
+          const match = rawCode.match(regex);
+
+          if (match) {
+            const [, srcValue] = match;
+            return `<a href="${srcValue}" data-fancybox>${rawCode}</a>`
+          } else {
+            return rawCode
+          }
+        }
+      })
     },
   }
-
 })
