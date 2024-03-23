@@ -19,10 +19,29 @@ export default defineConfig({
       'script',
       {},
       `document.querySelector('script[src="https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js"]').addEventListener('load', function() {
-        Fancybox.bind("[data-fancybox]", {
-          // Your custom options TODO: 双击放大无效
-          contentDblClick: "close"
-        });
+        const options = {
+          Toolbar: {
+            display: {
+              middle: [
+                "zoomIn",
+                "zoomOut",
+                "toggle1to1",
+                "rotateCCW",
+                "rotateCW",
+                "flipX",
+                "flipY",
+              ],
+              right: ["close"],
+            },
+          },
+          contentClick: "iterateZoom",
+          Images: {
+            Panzoom: {
+              dblClick: "iterateZoom",
+            },
+          }
+        };        
+        Fancybox.bind("[data-fancybox]", options);
       });`
     ]
   ],
@@ -42,7 +61,7 @@ export default defineConfig({
 
           if (match) {
             const [, srcValue] = match;
-            return `<a href="${srcValue}" data-fancybox>${rawCode}</a>`
+            return `<a href="${srcValue.replace('/resize,w_640','')}" data-fancybox>${rawCode}</a>`
           } else {
             return rawCode
           }
