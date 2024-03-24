@@ -1,28 +1,82 @@
 ---
-title: temp
-date: 2024-03-22
+title: Burnout 自我燃烧
+date: 2024-03-24
 ---
+
+Burnout，职业倦怠，是一种明确的精神疾病。有网友会戏谑地将它称为「自我燃烧病」
+
+## Burnout
+
+相信国内大部分的前端开发都听说过 `antfu` 这个活跃的开源大佬，这几天读到他的blog文章 [Mental Health in Open Source](https://antfu.me/posts/mental-health-oss)
+
+令我动容的不是他的成就而是他始终保持着的最刻板印象里的程序员 **木讷执着的真诚**，文章没有清晰的架构，里面大部分对开源工作的反思总结对我也没有现实意义上的用处，但是怎么去处理自己明显陷入的 Burnout，成了当下我需要去认真思考的问题
+
+antfu 的经历可以说是前端开发者里面最理想化的向上发展路线，爱好真正成为了职业，成了著名开源框架团队的成员，自己是自己的甲方，不需要坐班，没有 OKR、API，没有不明事理的领导的评判...
+
+但是他仍然真诚的表达自己日常面临挑战，表达对 Burnout 的思考和分享，表达所有人即使是他也会面对陷进去的可能，而又不会让读的人产生被居高临下的感受
+
+想起当时国外大张旗鼓公开讨论 work life balance 的时候，我们还在讨论996是不是福报
+
+当然宣扬着 work life balance 的人也会因为工作内容有意义，自身喜好而主动选择996。但是在这里的我们没有选择的自由
+
+以前我觉得这些东西离我遥远，我还年轻，我做着自己选择的行业，我不是那些因身体、因家庭、因能力扛不住 996 而面临职业危机的人
+
+但是我长久如此，工作成了仅仅是通过劳动力换取收入的方式，现在我的工作时长把我消耗殆尽，而且收入远远不如不用工作的人，一个底层螺丝钉却能看到驾驶机器的游手好闲并且可以过上自己一辈子努力都可能过不上的生活的人。即使我选择躺平及时行乐也处处受限，大环境下是否有一份工作也变得不稳定
+
+## 花
+
+去了玉渊潭公园，体验并不好，大部分樱花、桃花都没开
+
+但是我在乎的体验并不是花，毕竟可以接触到湖水、树林、鸟兽就是可以让我放松、开心的体验
+
+体验不好是因为人！太！多！了！
+
+一个普通的周末，一个普通的景点挤出了黄金周假期的感觉
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240324212819790.jpeg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240324212854120.jpeg?x-oss-process=image/format,webp/resize,w_320)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240324212846018.jpeg?x-oss-process=image/format,webp/resize,w_640)
+
+![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240324212900859.jpeg?x-oss-process=image/format,webp/resize,w_320)
+
+## 雨
+
+难得的，这座北方城市周日下了半天的小雨！
+
+但是不得不说，这里的排水做得真是一坨💩，路边到处都是大片大片不浅的水滩，还好这里基本不会下大雨和持久的雨，因此再差的排水，等几个小时也会流走，但是要时刻看着脚下不会流动的脏水和周围路过的车还是很糟心
+
+我大口呼吸带着水汽的空气，有着比南方浓厚的泥土味道，不知道是不是也更脏一点 🥹
+
+哎呀，明明不想做环境描写的！
+
+总之我喜欢下雨，我从小幻想着 “水浸街”，第一次知道威尼斯的时候羡慕得睡觉、走路、吃饭都在想象他们的生活，很喜欢黄锦树写的热带雨林黏腻的、永无止境的[《雨》](https://book.douban.com/subject/27192538/)，还有最近读的金爱烂[《你的夏天还好吗？》](https://book.douban.com/subject/26953294/)的一篇大雨末日的故事
+
+注：有浏览过女性视角的评价 [黄锦树《雨》请避雷-douban](https://www.douban.com/group/topic/301001502) ，但是我读的时候感觉还好，因为书的氛围是一种混杂着现实的奇谈类故事，免不了封建落后令人不适的女性处境，请做自己的判断
+
+大部分提到雨水的文本或影像都倾向于 `雨过天晴` 的美好寓意，而我偏偏喜欢雨水，所以大部分用下雨来渲染感情的东西都不能打动我，像《天气之子》就是着重在雨过天晴以及与自然共存、在自然灾难后如何面对生活，我常常觉得太过分了，雨水又扮演着不受人待见的角色
+
+即使相反的新海诚《言叶之庭》里主角期待下雨，但是拥抱的一幕仍然用着雨过天晴彩虹现身来让雨水退场（两部电影都能得出新海诚讲故事的能力是真滴水...）
 
 ## 手机浏览器插件
 
-### 广告拦截
+最近想给手机浏览网页安装自定义的插件或者脚本来提高使用体验，发现 `safari` 浏览器的插件生态已经比较完善了，而且发现安装 `stay for safari` 之后，就可以使用 `油猴脚本` 了，也就意味着即使没人做，我也可以自己实现我想要的脚本，而且可以跨平台(安卓特定浏览器、PC浏览器)用
 
-[adblockpro for safari](https://adblockpro.com/zh-cn)
+生活 Blog 还是不想写技术相关的内容，所以点到为止
 
-[easylist rules 官网介绍](https://easylist.to/index.html)
+- 油猴插件 [stay for safari](https://apps.apple.com/us/app/stay-for-safari/id1591620171)
+- 广告拦截插件 [adblockpro for safari](https://adblockpro.com/zh-cn)
+- 编写自定义油猴脚本 [vite-plugin-monkey 使用油猴API](https://github.com/lisonge/vite-plugin-monkey/blob/main/README_zh.md#esm-%E7%94%A8%E6%B3%95)
 
-[easylist github group](https://github.com/easylist) 里面有 easylist-china 仓库(官方维护的适合国内使用的拦截规则)
+👇 有意思的是看到这种说法：
 
-[easylist-china cdn](https://easylist-downloads.adblockplus.org/easylistchina.txt>)
+> 并不鼓励用户拦截掉所有的广告，对于可以接受的非恶意广告。希望用户允许他们的存在，毕竟这是广大站长赖以生存的方式
 
-从第三方规则源中分离出一些更加适合手机浏览器使用的规则，以及一些符合X浏览器特有规则 [rules for xbrowser](https://github.com/examplecode/ad-rules-for-xbrowser/blob/master/core-rule-cn.txt)
+我并不赞同，网站广告就像APP的开屏广告，做得好的广告会贴在不影响使用体验的角落，但是大部分网站广告甚至就在页面正中间 🙄
 
-[拦截原理](https://www.xbext.com/docs/ad-block-overview.html)
+只有培养用户的付费意识才是盈利的正确方式，而不是加入到不顾用户体验的牛皮癣大环境里去
 
-并不鼓励用户拦截掉所有的广告，对于可以接受的非恶意广告。希望用户允许他们的存在，毕竟这是广大站长赖以生存的方式 - 并不赞同，就如APP的开屏广告，只有培养用户的付费意识才是盈利的正确方法，而不是加入到不顾用户体验的广告收费大环境里去
+## 其他
 
-## 自定义脚本
-
-[vite-plugin-monkey 使用油猴API](https://github.com/lisonge/vite-plugin-monkey/blob/main/README_zh.md#esm-%E7%94%A8%E6%B3%95)
-
-[油猴API](https://www.xbext.com/docs/user-script-api-reference.html#GM-xmlhttpRequest)
+最近在 ipad 上玩 [cooking-adventure](https://apps.apple.com/us/app/cooking-adventure-chef-food/id1113335652) 烹饪冒险 又名 `吃完赶紧滚`， 好玩！！一玩就是2个小时...但是快乐！
