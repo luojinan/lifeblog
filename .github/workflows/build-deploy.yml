@@ -34,4 +34,6 @@ jobs:
           personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./.vitepress/dist
+          user_name: 'luojinan'
+          user_email: '1017386624@qq.com'
           commit_message: ${{ github.event.head_commit.message }}
