@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress';
+import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
 
 export default defineConfig({
   base: "/lifeblog/",
   title: "An's Blog",
   description: 'The life blog for me',
   head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
     ['link', { rel: 'icon', href: '/lifeblog/favicon.ico' }],
     [
       'link',
@@ -51,22 +51,7 @@ export default defineConfig({
       lazyLoading: true
     },
     config: (md) => {
-      // TODO: 自定义 markdownit plugin
-      md.use(function (md) {
-        const image = md.renderer.rules.image
-        md.renderer.rules.image = (...args) => {
-          let rawCode = image(...args);
-          const regex = /src=["']([^"']+)["']/;
-          const match = rawCode.match(regex);
-
-          if (match) {
-            const [, srcValue] = match;
-            return `<a href="${srcValue.replace('/resize,w_640','')}" data-fancybox>${rawCode}</a>`
-          } else {
-            return rawCode
-          }
-        }
-      })
+      md.use(markdownItFancybox)
     },
   }
 })

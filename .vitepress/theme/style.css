@@ -219,9 +219,9 @@ span.lang {
 strong {
   position: relative;
   background-color: var(--c-brand);
+  opacity: 0.8;
   padding: 0.1em 0.2em;
   font-size: 0.9em;
-  border-radius: 7.5px;
 }
 
 .popup {

@@ -53,6 +53,14 @@ const totalInfo = {
               src="/mingcute--photo-album-line.svg"
             />
           </a>
+          <a v-show="page.title !== 'AboutMe'" href="/lifeblog/aboutMe">
+            <img
+              class="inline-block ml-2 opacity-80 hover:opacity-100"
+              style="width: 24px; height: 24px;"
+              alt="aboutme"
+              src="/about-me.svg"
+            />
+          </a>
         </div>
       </nav>
     </div>
@@ -61,6 +69,7 @@ const totalInfo = {
       <NotFound v-else-if="page.isNotFound" />
       <Photo v-else-if="page.title === 'Photo'" />
       <FavouritePost v-else-if="page.title === 'FavouritePost'" />
+      <Content v-else-if="page.title === 'AboutMe'" class="prose prose-invert max-w-none pt-10 pb-8" />
       <Article v-else />
     </main>
     <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>

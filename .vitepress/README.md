@@ -1,5 +1,5 @@
 
-- [ ] 画廊页面设计
+- [x] 画廊页面设计
 - [x] 图片放大功能 [github](https://github.com/vuejs/vitepress/issues/854)
 - [x] 字数统计
 
@@ -44,12 +44,21 @@ fetch('https://ipinfo.io/json')
   .then(response => response.json())
   .then(data => {
     const country = data.country;
-    if (country === 'CN') {
-      window.location.href = 'gitee';
-    } else {
+    if (country === 'CN' && location.host.includes('github')) {
+      location.href = location.href.replace('luojinan.github', 'luojinan1.gitee');
     }
   })
   .catch(error => {
     console.log('获取 IP 地址时发生错误:', error);
   });
 ```
+
+在 gitee 提供按钮，添加参数跳转githubpage 并取消强制重定向
+
+## 使用GitHub action
+
+github action 可以直接使用 environment 存放产物作为github page的资源，不再需要一个专门存放产物的分支
+
+不考虑同步github仓库到gitee，gitee只用于部署page
+
+直接本地build出产物并强制push gitee
