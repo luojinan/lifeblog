@@ -10,27 +10,37 @@ import { loadScript } from './utils';
 
 const contentHtml = ref('')
 
+const markdownitCdn = 'https://registry.npmmirror.com/markdown-it/14.0.0/files/dist/markdown-it.min.js'
+const githubRawHost = 'https://raw.githubusercontent.com'
+const gitmirrorRawHost = 'https://raw.gitmirror.com'
+
 const loadMdIt = () => {
   if(window.markdownit) {
     return window.markdownit
   }
-  return loadScript('https://registry.npmmirror.com/markdown-it/14.0.0/files/dist/markdown-it.min.js', 'markdownit')
+  return loadScript(markdownitCdn, 'markdownit')
 }
 
 const getRawFile = ()=> {
-  const url = 'https://raw.gitmirror.com/luojinan/for-raw/main/favourite-post.md'
+  const url = `${gitmirrorRawHost}/luojinan/for-raw/main/favourite-post.md`
   
-  return fetch(url).then(raw => raw.text())
+  return fetch(url).then(raw => raw.text()).catch(()=> {
+    return fetch(`${githubRawHost}/luojinan/for-raw/main/favourite-post.md`).then(raw => raw.text())
+  })
 }
 
 onMounted(async () => {
-  const [markdownit, mdStr] = await Promise.all([
-    loadMdIt(),
-    getRawFile()
-  ])
-  const md = markdownit()
-  const result = md.render(mdStr)
-  contentHtml.value = result
+  try {
+    const [markdownit, mdStr] = await Promise.all([
+      loadMdIt(),
+      getRawFile()
+    ])
+    const md = markdownit()
+    const result = md.render(mdStr)
+    contentHtml.value = result
+  } catch (error) {
+    contentHtml.value = '加载失败'
+  }
 })
 </script>
 

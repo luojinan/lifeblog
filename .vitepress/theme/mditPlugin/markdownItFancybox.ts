@@ -3,6 +3,8 @@ export default function (md) {
   md.renderer.rules.image = (...args) => {
     let rawCode = image(...args);
     const regex = /src=["']([^"']+)["']/;
+    // 去除图片头 绕过图片跨域校验
+    rawCode = rawCode.replace('">','" referrerpolicy="no-referrer">')
     const match = rawCode.match(regex);
 
     if (match) {
