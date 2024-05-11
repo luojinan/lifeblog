@@ -41,6 +41,6 @@ date: 2024-04-13
 
 但是发现导出来的3g的数据无处安放，放网盘吗？现在没有免费好用的网盘；放硬盘吗？专门买个回来放这数据又有点浪费；现在这只能在电脑里躺着了
 
-很南方不一样的北方的花 🌸
+跟南方不一样的北方的花 🌸
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240413154937134.jpeg?x-oss-process=image/format,webp/resize,w_640)
