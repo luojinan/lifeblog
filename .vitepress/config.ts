@@ -1,7 +1,9 @@
 import { defineConfig } from 'vitepress';
 import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
+import { withPwa } from '@vite-pwa/vitepress'
+// import { pwa } from './script/pwa.js';
 
-export default defineConfig({
+export default withPwa(defineConfig({
   base: "/lifeblog/",
   title: "An's Blog",
   description: 'The life blog for me',
@@ -53,5 +55,33 @@ export default defineConfig({
     config: (md) => {
       md.use(markdownItFancybox)
     },
-  }
-})
+  },
+  
+  pwa: {
+    registerType: 'autoUpdate',
+    injectRegister: 'script-defer',
+    includeAssets: ['favicon.svg'],
+    manifest: {
+      name: 'an blog',
+      short_name: 'anBlog',
+      theme_color: '#ffffff',
+      icons: [
+        {
+          src: 'logo.svg',
+          type: 'image/svg',
+        },
+      ],
+    },
+    workbox: {
+      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+    },
+    experimental: {
+      includeAllowlist: true,
+    },
+    devOptions: {
+      enabled: true,
+      suppressWarnings: true,
+      navigateFallback: '/',
+    },
+  },
+}))
