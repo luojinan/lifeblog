@@ -79,7 +79,7 @@ export default withPwa(defineConfig({
       includeAllowlist: true,
     },
     devOptions: {
-      enabled: true,
+      enabled: false,
       suppressWarnings: true,
       navigateFallback: '/',
     },
