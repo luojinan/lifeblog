@@ -135,7 +135,7 @@ date: 2024-08-19
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240819161600176.jpg?x-oss-process=image/format,webp/resize,w_640)
 
-👆 还是讲了很久的，因为我后面我懒得安装跟她扯了很多有没有别的赔付方式，而前面其实讲的不旧，一切都发生的很快，在没有让提供什么东西时，戒备心放下来后，思考时间并不多
+👆 还是讲了很久的，因为后面懒得安装跟她扯了许久有没有别的赔付方式，而前面的操作时间不长，一切都发生的很快，在没有让提供什么东西时，戒备心放下来后，思考时间并不多
 
 ![](https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240819163701836.jpg?x-oss-process=image/format,webp/resize,w_340)
 
