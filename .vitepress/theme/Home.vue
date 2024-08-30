@@ -3,9 +3,20 @@ import Date from './Date.vue'
 import { data as posts } from './posts.data.js'
 import { useRouter, useData } from 'vitepress'
 import { calculateReadingTime } from './utils/index'
+import Pagination from './Pagination.vue';
+import { computed, ref } from 'vue';
 
 const { frontmatter } = useData()
 const {go} = useRouter()
+
+const currentPage = ref(1);
+const totalItems = posts.length;
+const pageSize = 5
+
+const postList = computed(() => {
+  return posts.slice((currentPage.value - 1) * pageSize, currentPage.value * pageSize)
+})
+
 </script>
 
 <template>
@@ -21,7 +32,7 @@ const {go} = useRouter()
       </p>
     </div>
     <ul class="divide-y divide-slate-200/5">
-      <li class="px-6 py-4 mb-4 bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of posts">
+      <li class="px-6 py-4 mb-4 bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of postList">
         <article
           class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline text-gray-300 cursor-pointer hover:text-white"
           @click="go(url)"
@@ -44,4 +55,5 @@ const {go} = useRouter()
       </li>
     </ul>
   </div>
+  <Pagination v-model:currentPage="currentPage" v-model:totalItems="totalItems" :pageSize="pageSize" />
 </template>
