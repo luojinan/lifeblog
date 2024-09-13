@@ -40,7 +40,7 @@ const totalInfo = {
             <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;" alt="photo"
               src="/mingcute--photo-album-line.svg" />
           </a>
-          <a href="/lifeblog/feed.rss">
+          <a href="https://luojinan.github.io/lifeblog/feed.rss">
             <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;" alt="rss"
               src="/rss.svg" />
           </a>
