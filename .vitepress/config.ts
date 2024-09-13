@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress';
 import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
 import { withPwa } from '@vite-pwa/vitepress'
+import { genFeed } from './genFeed.js';
 // import { pwa } from './script/pwa.js';
 
 export default withPwa(defineConfig({
@@ -84,4 +85,5 @@ export default withPwa(defineConfig({
     //   navigateFallback: '/',
     // },
   },
+  buildEnd: genFeed
 }))
