@@ -28,38 +28,25 @@ const totalInfo = {
     <div class="z-10 mx-auto px-4 fixed sm:relative w-full bg-neutral-900 sm:px-6 xl:max-w-5xl xl:px-0">
       <nav class="flex justify-between items-center pt-6 pb-2 font-bold">
         <a class="text-xl" href="/lifeblog/">
-          <img
-            class="inline-block mr-1"
-            style="width: 36px; height: 31px"
-            alt="logo"
-            src="/logo.svg"
-          />
+          <img class="inline-block mr-1" style="width: 36px; height: 31px" alt="logo" src="/logo.svg" />
           <span v-if="!frontmatter.index" class="link text-base font-normal italic">An's Blog</span>
         </a>
         <div class="text-sm text-white leading-5">
           <a v-show="page.title !== 'FavouritePost'" href="/lifeblog/favouritePost">
-          <img
-              class="inline-block ml-2 opacity-80 hover:opacity-100"
-              style="width: 24px; height: 24px;"
-              alt="favouritePost"
-              src="/file-like.svg"
-            />
+            <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;"
+              alt="favouritePost" src="/file-like.svg" />
           </a>
           <a v-show="page.title !== 'Photo'" href="/lifeblog/photo">
-            <img
-              class="inline-block ml-2 opacity-80 hover:opacity-100"
-              style="width: 24px; height: 24px;"
-              alt="photo"
-              src="/mingcute--photo-album-line.svg"
-            />
+            <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;" alt="photo"
+              src="/mingcute--photo-album-line.svg" />
+          </a>
+          <a href="/lifeblog/feed.rss">
+            <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;" alt="rss"
+              src="/rss.svg" />
           </a>
           <a v-show="page.title !== 'AboutMe'" href="/lifeblog/aboutMe">
-            <img
-              class="inline-block ml-2 opacity-80 hover:opacity-100"
-              style="width: 24px; height: 24px;"
-              alt="aboutme"
-              src="/about-me.svg"
-            />
+            <img class="inline-block ml-2 opacity-80 hover:opacity-100" style="width: 24px; height: 24px;" alt="aboutme"
+              src="/about-me.svg" />
           </a>
         </div>
       </nav>
@@ -72,6 +59,7 @@ const totalInfo = {
       <Content v-else-if="page.title === 'AboutMe'" class="prose prose-invert max-w-none pt-10 pb-8" />
       <Article v-else />
     </main>
-    <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{totalInfo.total}} 篇博客 · {{totalInfo.workCount.toLocaleString()}} 字</footer>
+    <footer class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm">共 {{ totalInfo.total }} 篇博客 ·
+      {{ totalInfo.workCount.toLocaleString() }} 字</footer>
   </div>
 </template>

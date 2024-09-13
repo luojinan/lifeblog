@@ -10,6 +10,8 @@ export async function genFeed(config: SiteConfig) {
     title: 'anblog',
     description: 'The life blog for an',
     id: baseUrl,
+    favicon: `${baseUrl}/favicon.ico`,
+    image: 'https://kingan-md-img.oss-cn-guangzhou.aliyuncs.com/blog/20240913113232107.png',
     link: baseUrl,
     copyright: ''
   })
