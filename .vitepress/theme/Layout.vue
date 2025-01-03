@@ -59,7 +59,7 @@ const totalInfo = {
               src="/mingcute--photo-album-line.svg"
             />
           </a>
-          <a href="https://lifeblog.5675675,xyz/feed.rss">
+          <a href="/feed.rss">
             <img
               class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px"
