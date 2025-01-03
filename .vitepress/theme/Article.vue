@@ -101,7 +101,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="pt-4">
-          <a class="link" href="/lifeblog/">← 全部博客</a>
+          <a class="link" href="/">← 全部博客</a>
         </div>
       </footer>
     </div>

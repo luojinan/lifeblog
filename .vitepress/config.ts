@@ -1,15 +1,15 @@
+import { withPwa } from '@vite-pwa/vitepress';
 import { defineConfig } from 'vitepress';
-import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
-import { withPwa } from '@vite-pwa/vitepress'
 import { genFeed } from './genFeed.js';
+import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
 // import { pwa } from './script/pwa.js';
 
 export default withPwa(defineConfig({
-  base: "/lifeblog/",
+  base: "/",
   title: "An's Blog",
   description: 'The life blog for me',
   head: [
-    ['link', { rel: 'icon', href: '/lifeblog/favicon.ico' }],
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
     [
       'link',
       { rel: 'stylesheet', href: "https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.css" }
@@ -57,7 +57,7 @@ export default withPwa(defineConfig({
       md.use(markdownItFancybox)
     },
   },
-  
+
   pwa: {
     registerType: 'autoUpdate',
     injectRegister: 'script-defer',

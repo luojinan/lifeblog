@@ -29,7 +29,7 @@ const totalInfo = {
       class="z-10 mx-auto px-4 fixed sm:relative w-full sm:px-6 xl:max-w-5xl xl:px-0"
     >
       <nav class="flex justify-between items-center pt-6 pb-2 font-bold">
-        <a class="text-xl" href="/lifeblog/">
+        <a class="text-xl" href="/">
           <img
             class="inline-block mr-1"
             style="width: 36px; height: 31px"
@@ -43,10 +43,7 @@ const totalInfo = {
           >
         </a>
         <div class="text-sm text-white leading-5">
-          <a
-            v-show="page.title !== 'FavouritePost'"
-            href="/lifeblog/favouritePost"
-          >
+          <a v-show="page.title !== 'FavouritePost'" href="/favouritePost">
             <img
               class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px"
@@ -54,7 +51,7 @@ const totalInfo = {
               src="/file-like.svg"
             />
           </a>
-          <a v-show="page.title !== 'Photo'" href="/lifeblog/photo">
+          <a v-show="page.title !== 'Photo'" href="/photo">
             <img
               class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px"
@@ -62,7 +59,7 @@ const totalInfo = {
               src="/mingcute--photo-album-line.svg"
             />
           </a>
-          <a href="https://luojinan.github.io/lifeblog/feed.rss">
+          <a href="https://lifeblog.5675675,xyz/feed.rss">
             <img
               class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px"
@@ -70,7 +67,7 @@ const totalInfo = {
               src="/rss.svg"
             />
           </a>
-          <a v-show="page.title !== 'AboutMe'" href="/lifeblog/aboutMe">
+          <a v-show="page.title !== 'AboutMe'" href="/aboutMe">
             <img
               class="inline-block ml-2 opacity-80 hover:opacity-100"
               style="width: 24px; height: 24px"

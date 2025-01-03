@@ -40,7 +40,7 @@ export default createContentLoader('posts/*.md', {
       .map(({ url, frontmatter, excerpt, src }) => ({
         workCount: countChineseCharacters(src),
         title: frontmatter.title,
-        url: `/lifeblog${url}`,
+        url,
         excerpt,
         date: formatDate(frontmatter.date)
       }))

@@ -1,9 +1,9 @@
-import path from 'path'
-import { writeFileSync } from 'fs'
 import { Feed } from 'feed'
+import { writeFileSync } from 'fs'
+import path from 'path'
 import { createContentLoader, type SiteConfig } from 'vitepress'
 
-const baseUrl = `https://luojinan.github.io/lifeblog`
+const baseUrl = `https://lifeblog.5675675.xyz`
 
 export async function genFeed(config: SiteConfig) {
   const feed = new Feed({
