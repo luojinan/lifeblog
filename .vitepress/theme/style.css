@@ -12,7 +12,7 @@
 }
 
 body {
-  @apply bg-neutral-900;
+  background-color: #101010;
 }
 
 nav img {
@@ -181,7 +181,9 @@ span.lang {
 .custom-block.tip:before {
   color: #42b883;
 }
-
+.prose {
+  --tw-prose-invert-body: #e1e1e1;
+}
 .prose
   :where(:not(pre) > code):not(
     :where([class~='not-prose'], [class~='not-prose'] *)
@@ -239,8 +241,7 @@ span.lang {
 }
 
 strong {
-  --vp-nolebase-mark-bg-color: #8c6befaa;
-  --vp-nolebase-mark-bg-shift: 0.4lh;
+  --vp-nolebase-mark-bg-shift: 0.5em;
   color: inherit;
   background-color: transparent;
   animation-name: mark-highlight-animation;
@@ -252,7 +253,7 @@ strong {
   background-repeat: no-repeat;
   background-image: linear-gradient(
     to right,
-    var(--vp-nolebase-mark-bg-color) 50%,
+    var(--c-brand) 50%,
     transparent 50%
   );
 
