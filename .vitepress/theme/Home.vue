@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import Date from './Date.vue'
-import { data as posts } from './posts.data.js'
-import { useRouter, useData } from 'vitepress'
-import { calculateReadingTime } from './utils/index'
-import Pagination from './Pagination.vue';
+import { useData, useRouter } from 'vitepress';
 import { computed, ref } from 'vue';
+import Date from './Date.vue';
+import Pagination from './Pagination.vue';
+import { data as posts } from './posts.data.js';
+import { calculateReadingTime } from './utils/index';
 
 const { frontmatter } = useData()
 const {go} = useRouter()
 
 const currentPage = ref(1);
 const totalItems = posts.length;
-const pageSize = 5
+const pageSize = 10
 
 const postList = computed(() => {
   return posts.slice((currentPage.value - 1) * pageSize, currentPage.value * pageSize)
