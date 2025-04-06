@@ -90,7 +90,7 @@ const totalInfo = {
       <Article v-else />
     </main>
     <footer
-      class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-2 pb-6 text-gray-300 text-sm"
+      class="max-w-3xl mx-auto xl:max-w-5xl px-4 pt-6 pb-6 text-gray-300 text-sm"
     >
       共 {{ totalInfo.total }} 篇博客 ·
       {{ totalInfo.workCount.toLocaleString() }} 字

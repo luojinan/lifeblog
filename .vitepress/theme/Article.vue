@@ -76,7 +76,7 @@ onMounted(() => {
       style="grid-template-rows: auto 1fr"
     >
       <div
-        class="divide-y divide-gray-200 divide-slate-200/5 xl:pb-0 xl:col-span-3 xl:row-span-2"
+        class="divide-y divide-gray-200 divide-slate-200/5 xl:pb-0 xl:col-span-3 xl:row-span-2 px-2"
       >
         <Content class="prose prose-invert max-w-none pt-10 pb-8" />
       </div>
