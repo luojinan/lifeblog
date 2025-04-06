@@ -42,22 +42,27 @@ async function scrollToTop() {
 <template>
   <div class="flex items-center justify-center space-x-2">
     <!-- 上一页按钮 -->
-    <button :disabled="currentPage <= 1" class="px-3 py-2 border rounded text-white"
-      :class="{ 'border-gray-300 text-gray-300': currentPage <= 1 }" @click="goToPage(currentPage - 1)">
+    <button :disabled="currentPage <= 1" 
+      class="px-3 py-2 border rounded text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
+      :class="{ 'opacity-50 cursor-not-allowed': currentPage <= 1 }" 
+      @click="goToPage(currentPage - 1)">
       ‹
     </button>
 
     <!-- 页码按钮 -->
     <button v-for="n in pageRange" :key="n"
-      class="px-3 py-2 border rounded border-gray-300 text-white hover:bg-blue-500 hover:border-blue-500"
-      :class="{ 'bg-blue-500 border-blue-500': n === currentPage }"
-      :aria-current="n === currentPage ? 'page' : undefined" @click="goToPage(n)">
+      class="px-3 py-2 border rounded text-gray-900 dark:text-white border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800"
+      :class="{ 'bg-gray-100 dark:bg-gray-800 border-gray-400 dark:border-gray-500': n === currentPage }"
+      :aria-current="n === currentPage ? 'page' : undefined" 
+      @click="goToPage(n)">
       {{ n }}
     </button>
 
     <!-- 下一页按钮 -->
-    <button :disabled="currentPage >= pageCount" class="px-3 py-2 border rounded text-white"
-      :class="{ 'border-slate-300 text-slate-300': currentPage >= pageCount }" @click="goToPage(currentPage + 1)">
+    <button :disabled="currentPage >= pageCount" 
+      class="px-3 py-2 border rounded text-gray-900 dark:text-white border-gray-300 dark:border-gray-600"
+      :class="{ 'opacity-50 cursor-not-allowed': currentPage >= pageCount }" 
+      @click="goToPage(currentPage + 1)">
       ›
     </button>
   </div>

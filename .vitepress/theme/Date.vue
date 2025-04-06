@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Post } from './posts.data.js'
+import type { Post } from './posts.data.js';
 
 const props = defineProps<{ date: Post['date'] }>()
 
@@ -11,7 +11,7 @@ function getDateTime() {
 <template>
   <dl>
     <dt class="sr-only">Published on</dt>
-    <dd class="text-base leading-6 font-medium text-gray-300">
+    <dd class="text-base leading-6 font-medium text-gray-900 dark:text-white">
       <time :datetime="getDateTime()">{{ date.string }}</time>
     </dd>
   </dl>

@@ -20,21 +20,21 @@ const postList = computed(() => {
 </script>
 
 <template>
-  <div class="divide-y divide-slate-200/5">
+  <div>
     <div class="pt-6 pb-8 space-y-2 text-center">
       <h1
-        class="text-3xl leading-9 font-extrabold text-white tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
+        class="text-3xl leading-9 font-extrabold text-gray-900 dark:text-white tracking-tight sm:text-4xl sm:leading-10 md:text-6xl md:leading-14"
       >
         {{ frontmatter.title }}
       </h1>
-      <p class="text-lg leading-7 text-gray-300">
+      <p class="text-lg leading-7 text-gray-600 dark:text-gray-300">
         {{ frontmatter.subtext }}
       </p>
     </div>
-    <ul class="divide-y divide-slate-200/5">
-      <li class="px-6 py-4 mb-4 bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of postList">
+    <ul>
+      <li class="px-6 py-4 mb-4 bg-gray-50 dark:bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of postList">
         <article
-          class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline text-gray-300 cursor-pointer hover:text-white"
+          class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline cursor-pointer hover:text-gray-900 dark:hover:text-white"
           @click="go(url)"
         >
           <Date :date="date" />
@@ -45,7 +45,7 @@ const postList = computed(() => {
               </h2>
               <div
                 v-if="excerpt"
-                class="prose prose-invert max-w-none text-gray-300"
+                class="prose dark:prose-invert max-w-none"
                 v-html="excerpt"
               ></div>
             </div>
