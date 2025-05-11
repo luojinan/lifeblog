@@ -1,0 +1,66 @@
+---
+description: AI rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## AI Coding Assistant Rules
+
+## TECH STACK
+
+- VitePress
+- Tailwind CSS
+- Vue.js
+- TypeScript
+
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+
+- All interactions with the AI coding assistant are logged and versioned.  
+- Version updates are noted in relevant sections (e.g., TECH STACK,  PROJECT DOCUMENTATION & CONTEXT SYSTEM).
+-  Commit messages should clearly describe changes made.
+
+## CODING STANDARDS
+
+- Use consistent naming conventions (e.g., camelCase for variables).
+- Write clean, well-documented code.
+- Follow Tailwind CSS best practices.  Dark mode support should be included for all components.  Colors should be defined using Tailwind classes wherever possible.  Avoid hardcoding colors unless absolutely necessary.
+- Utilize TypeScript for type safety.
+-  All SVG icons should use `currentColor` for fill color to inherit parent element's color.  Avoid hardcoding colors within SVGs.
+
+## WORKFLOW & RELEASE RULES
+
+- All changes must be thoroughly tested before deployment.
+-  Commit frequently with clear messages.
+- New features must be accompanied by comprehensive documentation.
+
+## DEBUGGING
+
+- Use browser developer tools for debugging.
+- Utilize console logging for troubleshooting.
+
+
+## BEST PRACTICES
+
+- Prioritize code readability and maintainability.
+-  Use version control (Git) effectively.
+-  Always test thoroughly before merging changes.
+-  Leverage Tailwind's dark mode features (`darkMode: 'class'`) for efficient theme switching.
+
+
+##  UI/UX GUIDELINES
+
+-  Maintain visual consistency across the application.
+-  Ensure accessibility for all users.
+-  Headers should include a subtle shadow (`shadow-sm`) in light mode and no shadow (`dark:shadow-none`) in dark mode.
+- List items should use a subtle background color to create visual separation (e.g., `bg-gray-50` for light mode, `dark:bg-neutral-800` for dark mode).
+
+
+##  CONFLICT RESOLUTION
+
+- If a new rule conflicts with an existing one, the conflict will be noted, and either resolved by clarifying the final rule or flagged for user confirmation.
+
+
+## REFERENCES
+
+- Tailwind CSS Documentation: [https://tailwindcss.com/docs](https://tailwindcss.com/docs)
+- VitePress Documentation: [https://vitepress.vuejs.org/](https://vitepress.vuejs.org/)
