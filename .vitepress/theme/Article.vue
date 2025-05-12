@@ -27,9 +27,9 @@ onMounted(() => {
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.animationPlayState = 'running' // 开始动画
+          (entry.target as HTMLElement).style.animationPlayState = 'running' // 开始动画
         } else {
-          entry.target.style.animationPlayState = 'paused' // 暂停动画
+          (entry.target as HTMLElement).style.animationPlayState = 'paused' // 暂停动画
         }
       })
     },
@@ -72,32 +72,31 @@ onMounted(() => {
     </header>
 
     <div
-      class="divide-y xl:divide-y-0 divide-gray-200 dark:divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-6 xl:pb-20"
-      style="grid-template-rows: auto 1fr"
+      class="divide-y divide-gray-200 dark:divide-slate-200/5 pb-6 xl:pb-20 flex flex-col"
     >
-      <div
-        class="divide-y divide-gray-200 dark:divide-slate-200/5 xl:pb-0 xl:col-span-3 xl:row-span-2 px-2"
-      >
+      <div class="px-2">
         <Content class="prose dark:prose-invert max-w-none pt-10 pb-8" />
       </div>
 
       <footer
-        class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-slate-200/5 xl:col-start-1 xl:row-start-2"
+        class="text-sm font-medium leading-5 divide-y divide-gray-200 dark:divide-slate-200/5 mt-4"
       >
-        <div v-if="nextPost" class="py-8">
-          <h2 class="text-xs tracking-wide uppercase dark:text-white">上一篇</h2>
-          <div class="link">
-            <a :href="nextPost.url">
-              {{ nextPost.title }} ({{ dateString(nextPost.date.time) }})
-            </a>
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <div v-if="nextPost" class="py-8 md:pr-4">
+            <h2 class="text-xs tracking-wide uppercase dark:text-white">上一篇</h2>
+            <div class="link">
+              <a :href="nextPost.url">
+                {{ nextPost.title }} ({{ dateString(nextPost.date.time) }})
+              </a>
+            </div>
           </div>
-        </div>
-        <div v-if="prevPost" class="py-8 text-right">
-          <h2 class="text-xs tracking-wide uppercase dark:text-white">下一篇</h2>
-          <div class="link">
-            <a :href="prevPost.url">
-              {{ prevPost.title }} ({{ dateString(prevPost.date.time) }})
-            </a>
+          <div v-if="prevPost" class="py-8 md:pl-4 md:ml-auto">
+            <h2 class="text-xs tracking-wide uppercase dark:text-white">下一篇</h2>
+            <div class="link">
+              <a :href="prevPost.url">
+                {{ prevPost.title }} ({{ dateString(prevPost.date.time) }})
+              </a>
+            </div>
           </div>
         </div>
         <div class="pt-4">

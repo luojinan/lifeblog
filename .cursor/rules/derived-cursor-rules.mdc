@@ -18,6 +18,8 @@ globs: *
 - All interactions with the AI coding assistant are logged and versioned.  
 - Version updates are noted in relevant sections (e.g., TECH STACK,  PROJECT DOCUMENTATION & CONTEXT SYSTEM).
 -  Commit messages should clearly describe changes made.
+- Version 2025.05.12:  Footer layout adjusted to display below content on all screen sizes.  Resolved issue with footer alignment when only one of "previous" or "next" post is available.
+
 
 ## CODING STANDARDS
 
@@ -26,12 +28,15 @@ globs: *
 - Follow Tailwind CSS best practices.  Dark mode support should be included for all components.  Colors should be defined using Tailwind classes wherever possible.  Avoid hardcoding colors unless absolutely necessary.
 - Utilize TypeScript for type safety.
 -  All SVG icons should use `currentColor` for fill color to inherit parent element's color.  Avoid hardcoding colors within SVGs.
+- Footer previous/next pagination should always be displayed below content regardless of screen size.  Use flexbox for responsive layout (see 2025.05.12 update in WORKFLOW & RELEASE RULES for details).
+
 
 ## WORKFLOW & RELEASE RULES
 
 - All changes must be thoroughly tested before deployment.
 -  Commit frequently with clear messages.
 - New features must be accompanied by comprehensive documentation.
+- Version 2025.05.12: Resolved issue with footer layout on different screen sizes.  The footer, including previous/next pagination, now consistently appears below the content.  Flexbox is now used for responsive layout in `Article.vue`.  Refer to commit e7fc0452-246e-4c8e-a394-8dbe0fc81262 for details. Resolved issue with footer alignment when only one of "previous" or "next" post is available.  The single pagination element now aligns correctly to either the left or right side.
 
 ## DEBUGGING
 
@@ -47,7 +52,7 @@ globs: *
 -  Leverage Tailwind's dark mode features (`darkMode: 'class'`) for efficient theme switching.
 
 
-##  UI/UX GUIDELINES
+## UI/UX GUIDELINES
 
 -  Maintain visual consistency across the application.
 -  Ensure accessibility for all users.
