@@ -1,8 +1,8 @@
 import { withPwa } from '@vite-pwa/vitepress';
 import { defineConfig } from 'vitepress';
 import { genFeed } from './genFeed.js';
-import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.ts';
-// import { pwa } from './script/pwa.js';
+import { pwa } from './script/pwa.js';
+import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.js';
 
 export default withPwa(defineConfig({
   base: "/",
@@ -58,32 +58,6 @@ export default withPwa(defineConfig({
     },
   },
 
-  pwa: {
-    registerType: 'autoUpdate',
-    injectRegister: 'script-defer',
-    includeAssets: ['favicon.svg'],
-    manifest: {
-      name: 'an blog',
-      short_name: 'anBlog',
-      theme_color: '#ffffff',
-      icons: [
-        {
-          src: 'logo.svg',
-          type: 'image/svg',
-        },
-      ],
-    },
-    workbox: {
-      globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
-    },
-    experimental: {
-      includeAllowlist: true,
-    },
-    // devOptions: {
-    //   enabled: false,
-    //   suppressWarnings: true,
-    //   navigateFallback: '/',
-    // },
-  },
+  pwa,
   buildEnd: genFeed
 }))

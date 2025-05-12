@@ -2,111 +2,59 @@ import type { PwaOptions } from '@vite-pwa/vitepress'
 
 export const pwa: Partial<PwaOptions> = {
   outDir: '.vitepress/dist',
-  registerType: 'prompt',
+  registerType: 'autoUpdate',
   includeManifestIcons: false,
   manifest: {
     id: '/',
-    name: 'Vite PWA',
-    short_name: 'Vite PWA',
-    description: 'Zero-config PWA for Vite and the ecosystem',
+    name: 'An\'s Blog',
+    short_name: 'anBlog',
+    description: 'The life blog for An',
     theme_color: '#ffffff',
     start_url: '/',
-    lang: 'en-US',
-    dir: 'ltr',
+    lang: 'zh-CN',
     orientation: 'natural',
     display: 'standalone',
     display_override: ['window-controls-overlay'],
-    categories: ['development', 'developer tools'],
+    categories: ['blog', 'personal'],
     icons: [
+      {
+        src: 'favicon.ico',
+        sizes: '48x48',
+        type: 'image/x-icon'
+      },
+      {
+        src: 'logo.svg',
+        sizes: '192x192 512x512',
+        type: 'image/svg+xml'
+      },
       {
         src: 'pwa-64x64.png',
         sizes: '64x64',
-        type: 'image/png',
+        type: 'image/png'
       },
       {
         src: 'pwa-192x192.png',
         sizes: '192x192',
-        type: 'image/png',
+        type: 'image/png'
       },
       {
         src: 'pwa-512x512.png',
         sizes: '512x512',
-        type: 'image/png',
-        purpose: 'any',
+        type: 'image/png'
       },
       {
-        src: 'maskable-icon.png',
+        src: 'maskable-icon-512x512.png',
         sizes: '512x512',
         type: 'image/png',
-        purpose: 'maskable',
-      },
+        purpose: 'maskable'
+      }
     ],
-    screenshots: [{
-      src: 'og-image.png',
-      sizes: '1200x630',
-      type: 'image/png',
-      label: 'Screenshot of Zero-config PWA Framework-agnostic Plugin for Vite and Integrations',
-    }],
-    shortcuts: [{
-      name: 'Getting Started',
-      description: 'Concepts and useful links for PWA (Progressive web applications): PWA made easy',
-      url: '/guide/',
-      icons: [{
-        src: 'shortcuts/guide.png',
-        sizes: '96x96',
-        type: 'image/png',
-      }],
-    }, {
-      name: 'Assets Generator',
-      description: 'Generate all the PWA assets from a single command and a single source image',
-      url: '/assets-generator/',
-      icons: [{
-        src: 'shortcuts/assets.png',
-        sizes: '96x96',
-        type: 'image/png',
-      }],
-    }, {
-      name: 'Frameworks',
-      description: 'All modern frameworks are supported: VanillaJS, TypeScript, Vue, React, Preact, Svelte, Solid, Web Components',
-      url: '/frameworks/',
-      icons: [{
-        src: 'shortcuts/frameworks.png',
-        sizes: '96x96',
-        type: 'image/png',
-      }],
-    }, {
-      name: 'Deploy',
-      description: 'Hints about how to deploy your PWA',
-      url: '/deployment/',
-      icons: [{
-        src: 'shortcuts/deploy.png',
-        sizes: '96x96',
-        type: 'image/png',
-      }],
-    }, {
-      name: 'Workbox',
-      description: 'Production-ready service worker libraries and tooling.',
-      url: '/workbox/',
-      icons: [{
-        src: 'shortcuts/workbox.png',
-        sizes: '96x96',
-        type: 'image/png',
-      }],
-    }],
-    handle_links: 'preferred',
-    launch_handler: {
-      client_mode: ['navigate-existing', 'auto'],
-    },
-    edge_side_panel: {
-      preferred_width: 480,
-    },
   },
   experimental: {
     includeAllowlist: true,
   },
   workbox: {
-    globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2,json,excalidraw}'],
-    globIgnores: ['shortcuts/*.svg'],
+    globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2,json}'],
     runtimeCaching: [
       {
         urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
@@ -137,10 +85,10 @@ export const pwa: Partial<PwaOptions> = {
         },
       },
       {
-        urlPattern: /^https:\/\/cdn\.jsdelivr\.net\/.*/i,
+        urlPattern: /^https:\/\/registry\.npmmirror\.com\/.*/i,
         handler: 'NetworkFirst',
         options: {
-          cacheName: 'jsdelivr-images-cache',
+          cacheName: 'npmmirror-cache',
           expiration: {
             maxEntries: 10,
             maxAgeSeconds: 60 * 60 * 24 * 7, // <== 7 days

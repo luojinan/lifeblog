@@ -7,10 +7,12 @@ globs: *
 
 ## TECH STACK
 
-- VitePress
+- VitePress (updated to latest version 1.6.3 using pnpm. See 2025.05.12 update in WORKFLOW & RELEASE RULES for details)
 - Tailwind CSS
 - Vue.js
 - TypeScript
+- pnpm (added 2025.05.12)
+- @vite-pwa/vitepress (updated to latest version 1.0.0 using pnpm. See 2025.05.12 update in WORKFLOW & RELEASE RULES for details)
 
 
 ## PROJECT DOCUMENTATION & CONTEXT SYSTEM
@@ -18,7 +20,9 @@ globs: *
 - All interactions with the AI coding assistant are logged and versioned.  
 - Version updates are noted in relevant sections (e.g., TECH STACK,  PROJECT DOCUMENTATION & CONTEXT SYSTEM).
 -  Commit messages should clearly describe changes made.
-- Version 2025.05.12:  Footer layout adjusted to display below content on all screen sizes.  Resolved issue with footer alignment when only one of "previous" or "next" post is available.
+- Version 2025.05.12: Footer layout adjusted to display below content on all screen sizes.  Resolved issue with footer alignment when only one of "previous" or "next" post is available.
+- Version 2025.05.12: VitePress and @vite-pwa/vitepress upgraded to latest versions using pnpm.
+- Version 2025.05.12: PWA manifest updated to include multiple sizes of PNG icons and a SVG icon for better browser compatibility.  See commit [insert commit hash here] for details.
 
 
 ## CODING STANDARDS
@@ -29,6 +33,7 @@ globs: *
 - Utilize TypeScript for type safety.
 -  All SVG icons should use `currentColor` for fill color to inherit parent element's color.  Avoid hardcoding colors within SVGs.
 - Footer previous/next pagination should always be displayed below content regardless of screen size.  Use flexbox for responsive layout (see 2025.05.12 update in WORKFLOW & RELEASE RULES for details).
+- PWA manifest icons should include multiple sizes and formats (PNG and SVG) for optimal compatibility across browsers and devices.
 
 
 ## WORKFLOW & RELEASE RULES
@@ -37,6 +42,9 @@ globs: *
 -  Commit frequently with clear messages.
 - New features must be accompanied by comprehensive documentation.
 - Version 2025.05.12: Resolved issue with footer layout on different screen sizes.  The footer, including previous/next pagination, now consistently appears below the content.  Flexbox is now used for responsive layout in `Article.vue`.  Refer to commit e7fc0452-246e-4c8e-a394-8dbe0fc81262 for details. Resolved issue with footer alignment when only one of "previous" or "next" post is available.  The single pagination element now aligns correctly to either the left or right side.
+- Version 2025.05.12: Upgraded VitePress and @vite-pwa/vitepress packages to latest versions using `pnpm upgrade vitepress@latest @vite-pwa/vitepress@latest --latest`.  Ensure `vite.config` is updated accordingly after package upgrades.  Use `pnpm config set registry http://registry.npmmirror.com/ && pnpm install` to resolve registry mismatches before upgrading.
+- Version 2025.05.12: Updated PWA manifest to include multiple sizes of PNG icons and an SVG icon.
+
 
 ## DEBUGGING
 
@@ -60,7 +68,7 @@ globs: *
 - List items should use a subtle background color to create visual separation (e.g., `bg-gray-50` for light mode, `dark:bg-neutral-800` for dark mode).
 
 
-##  CONFLICT RESOLUTION
+## CONFLICT RESOLUTION
 
 - If a new rule conflicts with an existing one, the conflict will be noted, and either resolved by clarifying the final rule or flagged for user confirmation.
 
