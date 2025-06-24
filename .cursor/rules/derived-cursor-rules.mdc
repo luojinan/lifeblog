@@ -44,7 +44,7 @@ globs: *
 - Version 2025.05.12: Resolved issue with footer layout on different screen sizes.  The footer, including previous/next pagination, now consistently appears below the content.  Flexbox is now used for responsive layout in `Article.vue`.  Refer to commit e7fc0452-246e-4c8e-a394-8dbe0fc81262 for details. Resolved issue with footer alignment when only one of "previous" or "next" post is available.  The single pagination element now aligns correctly to either the left or right side.
 - Version 2025.05.12: Upgraded VitePress and @vite-pwa/vitepress packages to latest versions using `pnpm upgrade vitepress@latest @vite-pwa/vitepress@latest --latest`.  Ensure `vite.config` is updated accordingly after package upgrades.  Use `pnpm config set registry http://registry.npmmirror.com/ && pnpm install` to resolve registry mismatches before upgrading.
 - Version 2025.05.12: Updated PWA manifest to include multiple sizes of PNG icons and an SVG icon.
-
+- When upgrading Tailwind CSS, always use the official migration script. Example command: `npx tailwindcss@latest upgrade --config postcss.config.js --dry-run`. Remember to remove the `--dry-run` flag when ready to apply the changes.
 
 ## DEBUGGING
 

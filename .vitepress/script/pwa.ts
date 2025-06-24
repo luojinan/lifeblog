@@ -6,7 +6,7 @@ export const pwa: Partial<PwaOptions> = {
   includeManifestIcons: false,
   manifest: {
     id: '/',
-    name: 'An\'s Blog',
+    name: "An's Blog",
     short_name: 'anBlog',
     description: 'The life blog for An',
     theme_color: '#ffffff',
@@ -48,10 +48,10 @@ export const pwa: Partial<PwaOptions> = {
         type: 'image/png',
         purpose: 'maskable'
       }
-    ],
+    ]
   },
   experimental: {
-    includeAllowlist: true,
+    includeAllowlist: true
   },
   workbox: {
     globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2,json}'],
@@ -63,26 +63,27 @@ export const pwa: Partial<PwaOptions> = {
           cacheName: 'google-fonts-cache',
           expiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
           },
           cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
+            statuses: [0, 200]
+          }
+        }
       },
       {
-        urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+        urlPattern:
+          /^https:\/\/kingan-md-img\.oss-cn-guangzhou\.aliyuncs\.com\/blog\/.*/i,
         handler: 'CacheFirst',
         options: {
-          cacheName: 'gstatic-fonts-cache',
+          cacheName: 'oss-img-cache',
           expiration: {
-            maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 365, // <== 365 days
+            maxEntries: 30,
+            maxAgeSeconds: 60 * 60 * 24 * 365 // <== 365 days
           },
           cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
+            statuses: [0, 200]
+          }
+        }
       },
       {
         urlPattern: /^https:\/\/registry\.npmmirror\.com\/.*/i,
@@ -91,13 +92,13 @@ export const pwa: Partial<PwaOptions> = {
           cacheName: 'npmmirror-cache',
           expiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 7, // <== 7 days
+            maxAgeSeconds: 60 * 60 * 24 * 7 // <== 7 days
           },
           cacheableResponse: {
-            statuses: [0, 200],
-          },
-        },
-      },
-    ],
-  },
+            statuses: [0, 200]
+          }
+        }
+      }
+    ]
+  }
 }
