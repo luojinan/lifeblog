@@ -24,12 +24,15 @@ const totalInfo = {
 </script>
 
 <template>
-  <div class="antialiased relative" style="min-height: 100vh">
+  <div
+    class="antialiased text-offgray dark:text-white bg-cream-100/20 dark:bg-[hsl(218,_13%,_7.5%)] relative"
+    style="min-height: 100vh"
+  >
     <div
-      class="z-10 mx-auto px-4 fixed sm:relative w-full sm:px-6 xl:max-w-5xl xl:px-0 text-offgray dark:text-white bg-cream-100/20 dark:bg-[hsl(218,_13%,_7.5%)] shadow-sm dark:shadow-none"
+      class="z-10 mx-auto px-4 bg-white dark:bg-neutral-900 fixed sm:relative w-full sm:px-6 xl:px-0 shadow-sm dark:shadow-none"
     >
       <nav
-        class="flex justify-between items-center bg-white dark:bg-neutral-900 pt-6 pb-2 font-bold"
+        class="flex justify-between items-cente pt-6 pb-2 font-bold xl:max-w-5xl xl:mx-auto"
       >
         <a class="text-xl" href="/">
           <img
