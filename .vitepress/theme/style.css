@@ -1,6 +1,6 @@
-@import 'tailwindcss' source('./');
-@plugin "@tailwindcss/typography";
-@custom-variant dark (&:where(.dark, .dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .vp-code span {
   color: var(--shiki-dark, inherit);
@@ -97,10 +97,7 @@ h3 .header-anchor:before {
 }
 
 /* Light theme code styles */
-.prose
-  :where(:not(pre) > code):not(
-    :where([class~='not-prose'], [class~='not-prose'] *)
-  ) {
+.prose :where(:not(pre) > code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   color: #0a3760;
   padding: 0.25em 0.4em;
   border-radius: 4px;
@@ -108,11 +105,7 @@ h3 .header-anchor:before {
 }
 
 /* Dark theme code styles */
-.dark
-  .prose
-  :where(:not(pre) > code):not(
-    :where([class~='not-prose'], [class~='not-prose'] *)
-  ) {
+.dark .prose :where(:not(pre) > code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
   color: #d1e9ff;
   background-color: #3c3a5b;
 }
@@ -181,6 +174,7 @@ strong {
   );
   animation-play-state: paused;
 }
+
 
 @keyframes mark-highlight-animation {
   0% {

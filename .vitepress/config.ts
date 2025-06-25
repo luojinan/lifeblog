@@ -1,35 +1,27 @@
-import { withPwa } from '@vite-pwa/vitepress'
-import { defineConfig } from 'vitepress'
-import { genFeed } from './genFeed.js'
-import { pwa } from './script/pwa.js'
-import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.js'
-import tailwindcss from '@tailwindcss/vite'
+import { withPwa } from '@vite-pwa/vitepress';
+import { defineConfig } from 'vitepress';
+import { genFeed } from './genFeed.js';
+import { pwa } from './script/pwa.js';
+import markdownItFancybox from './theme/mditPlugin/markdownItFancybox.js';
 
-export default withPwa(
-  defineConfig({
-    base: '/',
-    title: "An's Blog",
-    description: 'The life blog for me',
-    head: [
-      ['link', { rel: 'icon', href: '/favicon.ico' }],
-      [
-        'link',
-        {
-          rel: 'stylesheet',
-          href: 'https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.css'
-        }
-      ],
-      [
-        'script',
-        {
-          async: '',
-          src: 'https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js'
-        }
-      ],
-      [
-        'script',
-        {},
-        `document.querySelector('script[src="https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js"]').addEventListener('load', function() {
+export default withPwa(defineConfig({
+  base: "/",
+  title: "An's Blog",
+  description: 'The life blog for me',
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    [
+      'link',
+      { rel: 'stylesheet', href: "https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.css" }
+    ],
+    [
+      'script',
+      { async: '', src: "https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js", }
+    ],
+    [
+      'script',
+      {},
+      `document.querySelector('script[src="https://registry.npmmirror.com/@fancyapps/ui/5.0.35/files/dist/fancybox/fancybox.umd.js"]').addEventListener('load', function() {
         const options = {
           Toolbar: {
             display: {
@@ -51,25 +43,21 @@ export default withPwa(
               dblClick: "iterateZoom",
             },
           }
-        };
+        };        
         Fancybox.bind("[data-fancybox]", options);
       });`
-      ]
-    ],
-    markdown: {
-      image: {
-        // 默认禁用图片懒加载
-        lazyLoading: true
-      },
-      config: (md) => {
-        md.use(markdownItFancybox)
-      }
+    ]
+  ],
+  markdown: {
+    image: {
+      // 默认禁用图片懒加载
+      lazyLoading: true
     },
-    vite: {
-      plugins: [tailwindcss()]
+    config: (md) => {
+      md.use(markdownItFancybox)
     },
+  },
 
-    pwa,
-    buildEnd: genFeed
-  })
-)
+  pwa,
+  buildEnd: genFeed
+}))
