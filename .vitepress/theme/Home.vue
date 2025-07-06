@@ -1,22 +1,24 @@
 <script setup lang="ts">
-import { useData, useRouter } from 'vitepress';
-import { computed, ref } from 'vue';
-import Date from './Date.vue';
-import Pagination from './Pagination.vue';
-import { data as posts } from './posts.data.js';
-import { calculateReadingTime } from './utils/index';
+import { useData, useRouter } from 'vitepress'
+import { computed, ref } from 'vue'
+import Date from './Date.vue'
+import Pagination from './Pagination.vue'
+import { data as posts } from './posts.data.js'
+import { calculateReadingTime } from './utils/index'
 
 const { frontmatter } = useData()
-const {go} = useRouter()
+const { go } = useRouter()
 
-const currentPage = ref(1);
-const totalItems = posts.length;
+const currentPage = ref(1)
+const totalItems = posts.length
 const pageSize = 10
 
 const postList = computed(() => {
-  return posts.slice((currentPage.value - 1) * pageSize, currentPage.value * pageSize)
+  return posts.slice(
+    (currentPage.value - 1) * pageSize,
+    currentPage.value * pageSize
+  )
 })
-
 </script>
 
 <template>
@@ -32,7 +34,10 @@ const postList = computed(() => {
       </p>
     </div>
     <ul>
-      <li class="px-6 py-4 mb-4 bg-gray-50 dark:bg-neutral-800 rounded-lg" v-for="{ title, url, date, excerpt, workCount } of postList">
+      <li
+        class="px-6 py-4 mb-4 bg-white dark:bg-neutral-800 rounded-lg"
+        v-for="{ title, url, date, excerpt, workCount } of postList"
+      >
         <article
           class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline cursor-pointer hover:text-gray-900 dark:hover:text-white"
           @click="go(url)"
@@ -41,7 +46,7 @@ const postList = computed(() => {
           <div class="space-y-3 xl:col-span-3">
             <div class="space-y-6">
               <h2 class="text-2xl leading-8 font-bold tracking-tight">
-                <span class="">{{title}}</span>
+                <span class="">{{ title }}</span>
               </h2>
               <div
                 v-if="excerpt"
@@ -49,11 +54,20 @@ const postList = computed(() => {
                 v-html="excerpt"
               ></div>
             </div>
-            <div class="text-sm"><span>{{ workCount.toLocaleString() }}字 约需要 {{calculateReadingTime(workCount)}}分钟</span></div>
+            <div class="text-sm">
+              <span
+                >{{ workCount.toLocaleString() }}字 约需要
+                {{ calculateReadingTime(workCount) }}分钟</span
+              >
+            </div>
           </div>
         </article>
       </li>
     </ul>
   </div>
-  <Pagination v-model:currentPage="currentPage" v-model:totalItems="totalItems" :pageSize="pageSize" />
+  <Pagination
+    v-model:currentPage="currentPage"
+    v-model:totalItems="totalItems"
+    :pageSize="pageSize"
+  />
 </template>
