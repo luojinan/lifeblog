@@ -116,7 +116,7 @@ const totalInfo = {
       <FavouritePost v-else-if="page.title === 'FavouritePost'" />
       <Content
         v-else-if="page.title === 'AboutMe'"
-        class="prose prose-invert max-w-none pt-10 pb-8"
+        class="prose dark:prose-invert max-w-none pt-10 pb-8"
       />
       <Article v-else />
     </main>

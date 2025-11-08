@@ -34,7 +34,7 @@ function formatDate(raw: string): Post['date'] {
 // https://vitepress.dev/zh/guide/data-loading#createcontentloader
 export default createContentLoader('posts/*.md', {
   includeSrc: true, // 包含原始 markdown 源?
-  excerpt: true,    // 包含摘录?
+  excerpt: true, // 包含摘录?
   transform(raw): Post[] {
     return raw
       .map(({ url, frontmatter, excerpt, src }) => ({
